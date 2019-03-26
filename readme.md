@@ -12,6 +12,12 @@ A simple HTTP API to generate URI QR codes in SVG format
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+
+Click the following button
+
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/davidsonbpe/uri-qr-generator.git)
+
+
 ## Manual deploy
 
 ```
