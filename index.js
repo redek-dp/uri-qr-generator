@@ -5,7 +5,7 @@ var packageInfo = require('./package.json');
 var config = {
   "paramName": process.env['PARAM_NAME'] || 'uri',
   "uriPrefix": process.env['URI_PREFIX'] || '',
-  "port": process.env['PORT'] || process.env['HTTP_PORT'] || 8080
+  "port": process.env['PORT'] || process.env['HTTP_PORT'] || 8225
 };
 
 // Only respond to requests on /

@@ -8,15 +8,8 @@
 
 A simple HTTP API to generate URI QR codes in SVG format
 
-## Deploy to Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-
-Click the following button
-
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/davidsonbpe/uri-qr-generator.git)
-
+Click the following butto
 
 ## Manual deploy
 
@@ -24,7 +17,7 @@ Click the following button
 git clone https://github.com/orestes/uri-qr-generator.git
 cd uri-qr-generator
 npm install
-node server.js
+node index.js
 ```
 
 If everything's working correctly, you'll get the following message:
