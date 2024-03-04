@@ -2,30 +2,15 @@
   "name": "quaero-qr-generator",
   "version": "1.0.0",
   "description": "An HTTP API QR code generator",
-  "repository": "https://github.com/redek-dp/uri-qr-generator.git",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "tap --reporter=spec test/*.test.js",
-    "test-watch": "tap --reporter=spec --watch test/*.test.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "O",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "express": "4.13.3",
     "qr-image": "3.1.0"
-  },
-  "devDependencies": {
-    "commitizen": "2.4.6",
-    "cz-conventional-changelog": "1.1.5",
-    "i": "0.3.3",
-    "jscs": "2.8.0",
-    "jshint": "2.8.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    }
   }
 }
