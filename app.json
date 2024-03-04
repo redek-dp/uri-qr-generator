@@ -8,7 +8,7 @@
     "postdeploy": "npm install"
   },
   "success_url": "/",
-  "image": "heroku/nodejs",
+  "image": "nodejs",
   "env": {
     "PARAM_NAME": {
       "description": "The `GET` param name containing the URI to encode as a QR Code.",
