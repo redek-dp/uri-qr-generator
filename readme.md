@@ -1,11 +1,5 @@
 # uri-qr-generator
 
-![dependencies](https://david-dm.org/orestes/uri-qr-generator.svg)
-![release](https://img.shields.io/github/release/qubyte/rubidium.svg)
-![downloads](https://img.shields.io/github/downloads/orestes/uri-qr-generator/total.svg)
-![issues](https://img.shields.io/github/issues/orestes/uri-qr-generator.svg)
-![license](https://img.shields.io/github/license/orestes/uri-qr-generator.svg)
-
 A simple HTTP API to generate URI QR codes in SVG format
 
 
@@ -14,7 +8,7 @@ Click the following butto
 ## Manual deploy
 
 ```
-git clone https://github.com/orestes/uri-qr-generator.git
+git clone https://github.com/redek-dp/uri-qr-generator.git
 cd uri-qr-generator
 npm install
 node index.js
@@ -23,7 +17,7 @@ node index.js
 If everything's working correctly, you'll get the following message:
 
 ```
-uri-qr-generator is now listening on port 8080
+uri-qr-generator is now listening on port 8225
 ```
 
 ## Configuration
@@ -32,13 +26,13 @@ If they're present, we make use of the following environment variables:
 
 | Variable   | Setting                                                         | Default |
 |------------|-----------------------------------------------------------------|---------|
-| PORT       | Where the HTTP server should listen.                            | `8080`  |
+| PORT       | Where the HTTP server should listen.                            | `8225`  |
 | PARAM_NAME | The `GET` param name containing the URI to encode as a QR Code. | `uri`   |
 | URI_PREFIX | A prefix prepended to the all the URIs                          | *empty* |
 
 ## Usage
 
-Make an `HTTP GET` request to `https://server:port/?uri=https:%2F%2Fsome-server/a/b`. The response is a QR Code in SVG format. This is the QR encoded representation of the `https://some-server/a/b` URI.
+Make an `HTTP GET` request to `https://server:port/?uri=https://00020126450014BR.GOV.BCB.PIX01`. The response is a QR Code in SVG format. This is the QR encoded representation of the `https://00020126450014BR.GOV.BCB.PIX01` URI.
 
 Remember to correctly encode `GET` params.
 
@@ -48,7 +42,7 @@ Since we're using GET params, we can use the request URI as an image source, whi
 
 If your `PORT` parameter is set to `80` (the default HTTP port in browsers), you can skip the port when using the images
 
-`<img src="https://server/?uri=https:%2F%2Fsome-server/a/b" alt="https://some-server/a/b" />`
+`<img src="https://server/?uri=https://00020126450014BR.GOV.BCB.PIX01" alt="https://00020126450014BR.GOV.BCB.PIX01" />`
 
 ### Anti-abuse configuration
 
@@ -62,30 +56,6 @@ Now, `http://server:port/?path=/a/b` will return a QR Code in SVG format, pointi
 
 ## Troubleshooting
 
-Make sure the HTTP port (*default: 8080*) is not in use by some other process and/or change the HTTP port in the configuration. In some operating systems, you cannot listen on ports under 1000 without root permissions.
+Make sure the HTTP port (*default: 8225*) is not in use by some other process and/or change the HTTP port in the configuration. In some operating systems, you cannot listen on ports under 1000 without root permissions.
 
-[Report issues here](https://github.com/orestes/uri-qr-generator/issues)
 
-## License
-
-The MIT License (MIT)
-
-Copyright (c) 2016 Orestes Carracedo
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
