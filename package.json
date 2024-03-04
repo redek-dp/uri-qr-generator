@@ -5,7 +5,9 @@
   "repository": "https://github.com/orestes/uri-qr-generator.git",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "tap --reporter=spec test/*.test.js",
+    "test-watch": "tap --reporter=spec --watch test/*.test.js"
   },
   "keywords": [],
   "author": "Orestes Carracedo <orestes.ca@gmail.com> (https://orestes.io/)",
