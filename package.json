@@ -10,7 +10,7 @@
     "test-watch": "tap --reporter=spec --watch test/*.test.js"
   },
   "keywords": [],
-  "author": "Orestes Carracedo <orestes.ca@gmail.com> (https://orestes.io/)",
+  "author": "O",
   "license": "MIT",
   "dependencies": {
     "express": "4.13.3",
