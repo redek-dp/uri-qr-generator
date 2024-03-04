@@ -15,7 +15,7 @@ express.get('/', function (req, res) {
   var uri = config.uriPrefix + uriSuffix;
 
   // Generate the SVG image
-  var jpe_string = qr.imageSync(uri, {type: 'jpe'});
+  var jpe_string = qr.imageSync(uri, {type: 'jpeg'});
 
   // Respond with the SVG string using the appropriate MIME type
   res.setHeader('Content-Type', 'image/jpeg');
