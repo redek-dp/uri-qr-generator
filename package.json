@@ -2,7 +2,7 @@
   "name": "quaero-qr-generator",
   "version": "1.0.0",
   "description": "An HTTP API QR code generator",
-  "repository": "https://github.com/orestes/uri-qr-generator.git",
+  "repository": "https://github.com/redek-dp/uri-qr-generator.git",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
