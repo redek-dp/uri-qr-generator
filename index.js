@@ -14,10 +14,10 @@ express.get('/', function (req, res) {
   var uriSuffix = (req.query[config.paramName] || '');
   var uri = config.uriPrefix + uriSuffix;
 
-  // Generate the SVG image
+  // Generate the image
   var img_string = qr.imageSync(uri, {type: 'png'});
 
-  // Respond with the SVG string using the appropriate MIME type
+  // Respond with the string using the appropriate MIME type
   res.setHeader('Content-Type', 'image/png');
   res.end(img_string);
 });
