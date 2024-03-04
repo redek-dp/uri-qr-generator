@@ -15,11 +15,11 @@ express.get('/', function (req, res) {
   var uri = config.uriPrefix + uriSuffix;
 
   // Generate the SVG image
-  var jpe_string = qr.imageSync(uri, {type: 'jpeg'});
+  var img_string = qr.imageSync(uri, {type: 'png'});
 
   // Respond with the SVG string using the appropriate MIME type
-  res.setHeader('Content-Type', 'image/jpeg');
-  res.end(jpe_string);
+  res.setHeader('Content-Type', 'image/png');
+  res.end(img_string);
 });
 
 // Start listening for HTTP requests
