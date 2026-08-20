@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "4.13.3",
-    "qr-image": "3.1.0"
+    "express": "5.13.3",
+    "qr-image": "3.2.0"
   }
 }
