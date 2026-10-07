@@ -1,61 +1,120 @@
-# uri-qr-generator
+<img src="https://github.githubassets.com/assets/actions-matrix-aac8c29bd225.svg" min-width="150px" max-width="150px" width="150px" align="right" alt="">
 
-A simple HTTP API to generate URI QR codes in SVG format
+# URI-QR-GENERATOR.
 
+UMA API HTTP SIMPLES PARA GERAR CÓDIGOS QR DE URI NO FORMATO SVG. BY DEVELOPER DAVIDSONBPE...
 
-Click the following butto
+----------
 
-## Manual deploy
+### LINK
 
+```bash
+https://uri-qr-generator.vercel.app/?uri=https://uri-qr-generator.vercel.app/
 ```
+
+--------
+
+### GIT CLONE
+
+```bash
 git clone https://github.com/redek-dp/uri-qr-generator.git
+```
+
+--------
+
+### CD PASTA
+
+```bash
 cd uri-qr-generator
+```
+
+--------
+
+### NPM INSTALL
+
+```bash
 npm install
+```
+
+--------
+
+### NODE SERVER
+
+```bash
 node index.js
 ```
 
-If everything's working correctly, you'll get the following message:
+--------
+
+SE TUDO ESTIVER FUNCIONANDO CORRETAMENTE, VOCÊ RECEBERÁ A SEGUINTE MENSAGEM:
 
 ```
-uri-qr-generator is now listening on port 8225
+URI-QR-GENERATOR ESTÁ AGUARDANDO CONEXÕES NA PORTA 8225
 ```
 
-## Configuration
+## CONFIGURAÇÃO
 
-If they're present, we make use of the following environment variables:
+CASO ESTEJAM DEFINIDAS, UTILIZAMOS AS SEGUINTES VARIÁVEIS ​​DE AMBIENTE:
 
-| Variable   | Setting                                                         | Default |
-|------------|-----------------------------------------------------------------|---------|
-| PORT       | Where the HTTP server should listen.                            | `8225`  |
-| PARAM_NAME | The `GET` param name containing the URI to encode as a QR Code. | `uri`   |
-| URI_PREFIX | A prefix prepended to the all the URIs                          | *empty* |
+| VARIÁVEL   | CONFIGURAÇÃO                                                         | PADRÃO  |
+|------------|----------------------------------------------------------------------|---------|
+| PORT       | PORTA EM QUE O SERVIDOR HTTP DEVE ESCUTAR. | `8225`  |
+| PARAM_NAME | NOME DO PARÂMETRO `GET` QUE CONTÉM A URI A SER CODIFICADA EM QR CODE. | `URI`   |
+| URI_PREFIX | PREFIXO A SER ADICIONADO AO INÍCIO DE TODAS AS URIS.                 | *VAZIO* |
 
-## Usage
+## USO
 
-Make an `HTTP GET` request to `https://server:port/?uri=https://00020126450014BR.GOV.BCB.PIX01`. The response is a QR Code in SVG format. This is the QR encoded representation of the `https://00020126450014BR.GOV.BCB.PIX01` URI.
+FAÇA UMA REQUISIÇÃO `HTTP GET` PARA `HTTPS://SERVER:PORT/?URI=HTTPS://00020126450014BR.GOV.BCB.PIX01`. A RESPOSTA É UM QR CODE NO FORMATO SVG. ESSA É A REPRESENTAÇÃO EM QR CODE DA URI `HTTPS://00020126450014BR.GOV.BCB.PIX01`.
 
-Remember to correctly encode `GET` params.
+LEMBRE-SE DE CODIFICAR CORRETAMENTE OS PARÂMETROS DA REQUISIÇÃO `GET`.
 
-### Embeddeding QR codes as HTML images
+### INCORPORANDO QR CODES COMO IMAGENS HTML
 
-Since we're using GET params, we can use the request URI as an image source, which be cached by browsers, proxies, etc...
+COMO ESTAMOS UTILIZANDO PARÂMETROS `GET`, PODEMOS USAR A URI DA REQUISIÇÃO COMO FONTE DA IMAGEM, A QUAL PODERÁ SER ARMAZENADA EM CACHE POR NAVEGADORES, PROXIES, ETC.
 
-If your `PORT` parameter is set to `80` (the default HTTP port in browsers), you can skip the port when using the images
+SE O PARÂMETRO `PORT` ESTIVER DEFINIDO COMO `80` (A PORTA HTTP PADRÃO DOS NAVEGADORES), VOCÊ PODE OMITIR A PORTA AO UTILIZAR AS IMAGENS.
 
 `<img src="https://server/?uri=https://00020126450014BR.GOV.BCB.PIX01" alt="https://00020126450014BR.GOV.BCB.PIX01" />`
 
-### Anti-abuse configuration
+### CONFIGURAÇÃO DE PROTEÇÃO CONTRA ABUSO
 
-Unless you protect your API (by proxying through some other HTTP server, for example), anyone making requests to your service could be generating QR codes for free using your resources.
+A MENOS QUE VOCÊ PROTEJA SUA API (POR EXEMPLO, UTILIZANDO UM PROXY ATRAVÉS DE OUTRO SERVIDOR HTTP), QUALQUER PESSOA QUE FIZER REQUISIÇÕES AO SEU SERVIÇO PODERÁ GERAR CÓDIGOS QR GRATUITAMENTE UTILIZANDO SEUS RECURSOS.
 
-A typical use case is generating QR codes for a single domain name. Set your **URI_PREFIX** to `"https://my-domain"` and then pass relative URLs in your `GET` param values. Since every QR code will now start with your domain name, your service won't be useful for anyone else.
+UM CASO DE USO TÍPICO É A GERAÇÃO DE CÓDIGOS QR PARA UM ÚNICO NOME DE DOMÍNIO. DEFINA SUA VARIÁVEL **URI_PREFIX** COMO `"HTTPS://MY-DOMAIN"` E, EM SEGUIDA, PASSE URLS RELATIVAS NOS VALORES DOS PARÂMETROS `GET`. COMO TODO CÓDIGO QR COMEÇARÁ COM O SEU NOME DE DOMÍNIO, O SERVIÇO NÃO TERÁ UTILIDADE PARA TERCEIROS.
 
-You should also rename the GET param to `path` so the API requests are more clear:
+VOCÊ TAMBÉM DEVE RENOMEAR O PARÂMETRO `GET` PARA `PATH`, TORNANDO AS REQUISIÇÕES DA API MAIS CLARAS:
 
-Now, `http://server:port/?path=/a/b` will return a QR Code in SVG format, pointing to `https://my-domain/a/b`
+AGORA, `HTTP://SERVER:PORT/?PATH=/A/B` RETORNARÁ UM CÓDIGO QR NO FORMATO SVG, APONTANDO PARA `HTTPS://MY-DOMAIN/A/B`
 
-## Troubleshooting
+## SOLUÇÃO DE PROBLEMAS
 
-Make sure the HTTP port (*default: 8225*) is not in use by some other process and/or change the HTTP port in the configuration. In some operating systems, you cannot listen on ports under 1000 without root permissions.
+CERTIFIQUE-SE DE QUE A PORTA HTTP (*PADRÃO: 8225*) NÃO ESTEJA SENDO UTILIZADA POR OUTRO PROCESSO E/OU ALTERE A PORTA HTTP NA CONFIGURAÇÃO. EM ALGUNS SISTEMAS OPERACIONAIS, NÃO É POSSÍVEL ESCUTAR EM PORTAS INFERIORES A 1000 SEM PRIVILÉGIOS DE ROOT.
+
+--------
+
+<br />
+
+## CONECTE-SE COM NÓS:
+
+[<img height="30" src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="davidsonbpe | YouTube" />][youtube]
+[<img height="30" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="davidsonbpe | Instagram" />][instagram]
+[<img height="30" src="https://img.shields.io/badge/CodePen-003333?style=for-the-badge&logo=CodePen&logoColor=white" alt="davidsonbpe | CodePen" />][CodePen]
+[<img height="30" src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="davidsonbpe | Facebook" />][facebook]
+<a href="mailto:dev7.capital366@passinbox.com" alt="Email">
+<img height="30" src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=Minutemailer&logoColor=white" /></a>
+<a href="https://br.pinterest.com/davidsonbpe/" alt="Pinterest">
+<img height="30" src="https://img.shields.io/badge/Pinterest-FF0000?style=for-the-badge&logo=Pinterest&logoColor=white" /></a>
+
+<br />
+
+<a href="https://dav7.pages.dev/" align="right" alt="Visitor count">
+<img height="30" src="https://raw.githubusercontent.com/davserv/d-framework/refs/heads/img-iso/count.svg" /></a>
+
+<br />
+
+[youtube]: https://www.youtube.com/channel/UCHqvw9v2Fp6o006lUskoigg/
+[instagram]: https://www.instagram.com/davidsonbpe/
+[facebook]: https://www.facebook.com/decomrradio/
+[CodePen]: https://codepen.io/davidsonbpe/
 
 
